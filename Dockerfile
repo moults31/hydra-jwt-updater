@@ -8,6 +8,7 @@ COPY requirements.txt requirements.txt
 RUN pip3 install -r requirements.txt
 
 COPY hydra .
-COPY update-jwt.py .
+COPY update_jwt.py .
+COPY server.py .
 
-CMD [ "python3", "-u", "update-jwt.py"]
+CMD [ "python3", "-u", "server.py"]
